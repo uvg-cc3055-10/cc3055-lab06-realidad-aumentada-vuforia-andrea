@@ -12,6 +12,7 @@ using Vuforia;
 //Implementa la interfaz IVirtualButtonEventHandler
 public class VirtualButton : MonoBehaviour, IVirtualButtonEventHandler
 {
+    //Atributos
     VirtualButtonBehaviour virtualBtn;
     public Animator birdAnim;
 
@@ -32,7 +33,9 @@ public class VirtualButton : MonoBehaviour, IVirtualButtonEventHandler
 
     // Use this for initialization
     void Start () {
+        //Obtiene el componente VirtualButtonBehavior
         virtualBtn = GetComponent<VirtualButtonBehaviour>();
+        //Registra el script como manejador de eventos del bo´ton
         virtualBtn.RegisterEventHandler(this);
 
     }
